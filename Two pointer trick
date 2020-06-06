@@ -1,0 +1,46 @@
+array = [0, 1, 1, 2, 2, 3, 4, 4, 4, 5, 7, 10, 10, 12, 12, 13, 13]
+
+# answer = [0,1,2,3,4,5,7,10,12,13]
+
+"""
+there will be two indexes.
+index1 = the position where we are writing to in the array.
+index2 = the position where we are reading from in the array.
+"""
+
+index1 = 0
+index2 = 0
+
+"""
+keep incrementing index2 until the value changes
+if the value changes, then increment index1, and copy the element at index 2 to the element at index1
+"""
+"""
+array = [0, 1, 1, 2, 2, 3, 4, 4, 4, 5, 7, 10, 10, 12, 12, 13, 13] index1 = 0, index2 = 0
+array = [0, 1, 1, 2, 2, 3, 4, 4, 4, 5, 7, 10, 10, 12, 12, 13, 13] index1 = 0, index2 = 1
+
+array = [0, 1, 1, 2, 2, 3, 4, 4, 4, 5, 7, 10, 10, 12, 12, 13, 13] index1 = 1, index2 = 1
+array = [0, 1, 1, 2, 2, 3, 4, 4, 4, 5, 7, 10, 10, 12, 12, 13, 13] index1 = 1, index2 = 2
+array = [0, 1, 1, 2, 2, 3, 4, 4, 4, 5, 7, 10, 10, 12, 12, 13, 13] index1 = 1, index2 = 3
+
+array = [0, 1, 1, 2, 2, 3, 4, 4, 4, 5, 7, 10, 10, 12, 12, 13, 13] index1 = 2, index2 = 3
+
+array = [0, 1, 2, 2, 2, 3, 4, 4, 4, 5, 7, 10, 10, 12, 12, 13, 13] index1 = 2, index2 = 3
+array = [0, 1, 2, 2, 2, 3, 4, 4, 4, 5, 7, 10, 10, 12, 12, 13, 13] index1 = 2, index2 = 4
+array = [0, 1, 2, 2, 2, 3, 4, 4, 4, 5, 7, 10, 10, 12, 12, 13, 13] index1 = 2, index2 = 5
+
+array = [0, 1, 2, 2, 2, 3, 4, 4, 4, 5, 7, 10, 10, 12, 12, 13, 13] index1 = 3, index2 = 5
+array = [0, 1, 2, 3, 2, 3, 4, 4, 4, 5, 7, 10, 10, 12, 12, 13, 13] index1 = 3, index2 = 5
+array = [0, 1, 2, 2, 2, 3, 4, 4, 4, 5, 7, 10, 10, 12, 12, 13, 13] index1 = 3, index2 = 6
+......
+array = [0, 1, 2, 3, 2, 3, 4, 4, 4, 5, 7, 10, 10, 12, 12, 13, 13] index1 = 3, index2 = 9
+
+array = [0, 1, 2, 3, 2, 3, 4, 4, 4, 5, 7, 10, 10, 12, 12, 13, 13] index1 = 4, index2 = 9
+array = [0, 1, 2, 3, 4, 3, 4, 4, 4, 5, 7, 10, 10, 12, 12, 13, 13] index1 = 4, index2 = 9
+
+etc. etc.
+
+the two indexes are called pointers and in the code we write i and j for them
+index1 = i
+index2 = j
+"""
